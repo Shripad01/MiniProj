@@ -11,15 +11,7 @@
     z-index: 2; 
     display: none; 
 }
-.form-box
-{
-    width: 300px;
-    height: 400px;
-    position:sticky;
-    top: 90px;
-    left: 210px;
-    background: transparent
-}
+
 .close 
 {
     left: 270px;
