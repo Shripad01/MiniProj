@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./style-log.css">
-  
+
 
 </head>
 
@@ -15,39 +15,87 @@
 
     <div class="container">
       <div class="content">
-        <img src="https://img.freepik.com/premium-vector/logo-food-catering-that-is-called-food-catering_540027-2.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1710460800&semt=ais" alt="food"
-        class="img1" />
+        <img
+          src="https://img.freepik.com/premium-vector/logo-food-catering-that-is-called-food-catering_540027-2.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1710460800&semt=ais"
+          alt="food" class="img1" />
         <p class="header">Create account </p>
-        <form action="/register" method="post">
-          <input type="email" name="email" placeholder="Email" class="detail" /><br />
-          <input type="text" name="username" placeholder="Username" class="detail" /><br />
-          <input type="text" name="fullname" placeholder="Full Name" class="detail" /><br />
+        <form >
+          <input type="email" name="email" placeholder="Email" class="detail" id="myemail" /><br />
+          <p id="email_err"></p>
+          <input type="text" name="username" placeholder="Username" class="detail" id="name" /><br />
+          <p id="name_err"></p>
+          <input type="number" name="phoneno" placeholder="PhoneNo" class="detail" id="phonenum" /><br />
+          <p id="phone_err"></p>
+          <input type="number" name="age" placeholder="Age" class="detail" id="myage" /><br />
+          <p id="age_err"></p>
           <input type="password" name="password" placeholder="Password" class="detail" />
-          <input type="submit" class="btn int" value="Register Account" />
+          <input type="submit" class="btn int" value="Register Account" onclick="validateform(event)" />
         </form>
-        
-        <a href=" ">Forgot password</a>
-        <p class="or">OR</p>
-        <button class="btn fbk">
-          <i class="fab fa-facebook fa-lg" style="color: white; padding-right: 10px"></i>
-          <a href="">Continue Facebook</a>
-        </button>
-        <br />
-        <button class="btn ggl">
-          <i class="fab fa-google" style="color: rgb(11, 241, 218); padding-right: 10px"></i>
-          <a href="">Continue Google</a>
-        </button>
+        <script>
+          function validateform() {event.preventDefault()
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("myemail").value;
+            var tel = document.getElementById("phonenum").value;
+            var age = document.getElementById("myage").value;
 
-        <footer>
-          <p>
-            By continuing, you agree to Pinterest's
-            <b>Terms of Service, Privacy policy.</b>
-          </p>
-          <hr />
-          <a href="">Already on Pinterest yet? Sign up</p>
-          </footer>
-        </div>
+
+
+            let nameRegex = /^[a-zA-Z\s\d]+$/;
+            let emailva = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            var isValid = true;
+
+            // Validate Name
+            if (!nameRegex.test(name)) {
+              document.getElementById("name_err").innerHTML = "**Name cannot be empty!";
+              document.getElementById("name_err").style.color = "red";
+              document.getElementById("name_err").style.fontSize = "15px";
+              isValid = false;
+            } else {
+              document.getElementById("name").innerHTML = "";
+            }
+            // Validate Email
+            if (!emailva.test(email)) {
+              document.getElementById("email_err").innerText = "**Give the correct email address";
+              document.getElementById("email_err").style.color = "red";
+              document.getElementById("email_err").style.fontSize = "15px";
+              isValid = false;
+            }
+            else {
+              document.getElementById("email_err").innerHTML = "";
+            }
+
+            // Validate Phone Number
+            if (tel.length < 10 || isNaN(tel)) {
+              document.getElementById("phone_err").innerHTML = "**Phone number must be at least 10 digits and should not include characters!";
+              document.getElementById("phone_err").style.color = "red";
+              document.getElementById("phone_err").style.fontSize = "15px";
+              isValid = false;
+            } else {
+              document.getElementById("phone_err").innerHTML = "";
+            }
+
+            // Validate Age
+            if (age.trim() == "" || isNaN(age)) {
+              document.getElementById("age_err").innerHTML = "**Age must be a number!";
+              document.getElementById("age_err").style.color = "red";
+              document.getElementById("age_err").style.fontSize = "15px";
+              isValid = false;
+            } else {
+              document.getElementById("age_err").innerHTML = "";
+            }
+
+            if(isValid){
+              alert(" Form Submitted")
+            }
+
+
+          }
+
+
+        </script>
+
       </div>
     </div>
-    </body>
-    </html>
+</body>
+
+</html>

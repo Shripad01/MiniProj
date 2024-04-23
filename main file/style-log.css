@@ -202,13 +202,6 @@ a {
     outline: none;
 }
 
-h4 {
-    font-size: 1vw;
-    font-weight: 700;
-    position: relative;
-    left: -6vw;
-    margin: 2px;
-}
 
 .btn {
     width: 100%;
@@ -216,7 +209,7 @@ h4 {
     border: hidden;
     border-radius: 20px;
     margin: 0.3vw 0px;
-}
+} 
 
 .int {
     background-color: rgb(20, 161, 232);
@@ -229,69 +222,6 @@ h4 {
     background-color: rgb(152, 203, 11);
     ;
 }
-
-.or {
-    font-size: 1vw;
-    font-weight: 700;
-    margin: 1vw 0px;
-}
-
-.fbk {
-    background-color: rgb(9, 128, 240);
-    margin: 0.3vw 0px;
-    font-size: 1vw;
-}
-
-.fbk a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.fbk:hover {
-    background-color: rgb(8, 206, 163);
-}
-
-.ggl {
-    text-align: center;
-    background-color: #ea1717;
-}
-
-.ggl a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    font-size: 1vw;
-    letter-spacing: 1px;
-}
-
-.ggl:hover {
-    background-color: #a0a0a0;
-}
-
-footer p {
-    font-size: 1vw;
-    margin: 1vw;
-    opacity: 0.7;
-}
-
-p:last-child {
-    opacity: 1;
-}
-
-hr {
-    width: 50%;
-    opacity: 0.4;
-    margin-left: 25%;
-}
-
-a {
-    font-size: 1vw;
-}
-
-
-/* sopping css */
 
 
 

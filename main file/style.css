@@ -61,12 +61,7 @@
     padding: 15px;
     font-size: 14px;
 }
-.loginbtn{
-    background: transparent;
-    border: 2px solid black;
-    color: white;
-    font-size: 20px;
-}
+
 .form button
 {
     font-family: sans-serif;
